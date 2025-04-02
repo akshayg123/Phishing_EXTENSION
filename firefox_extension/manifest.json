@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Phishing Detector",
+    "version": "1.0",
+    "description": "Analyzes the current email for phishing signs using a local model.",
+
+    "permissions": [
+        "activeTab", 
+        "scripting"  
+    ],
+
+    "host_permissions": [
+        "http://127.0.0.1:5000/*", 
+        "*://mail.google.com/*"    
+    ],
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "phishing-detector@example.com"
+        }
+    }
+}

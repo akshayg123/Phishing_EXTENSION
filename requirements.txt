@@ -1,0 +1,14 @@
+# backend/requirements.txt (for Python 3.11.9 and TF 2.18.0)
+
+Flask==2.3.3
+Flask-Cors==4.0.0
+tensorflow==2.18.0  # <-- IMPORTANT: Match the Colab TF version
+
+# Let pip determine the correct versions of these dependencies
+# required by tensorflow 2.18.0 for Python 3.11.
+# Removing specific pins for numpy, h5py, protobuf unless conflicts arise.
+numpy
+h5py
+protobuf
+
+# Add any other libraries specifically needed ONLY for the server.py prediction path, if any.
